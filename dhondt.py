@@ -20,13 +20,14 @@ parties = [Party('PIS', 5711687),
            Party('PO', 3661474),
            Party('Kukiz15', 1339094),
            Party('Nowoczesna', 1155370),
-           Party('PSL', 779875)]
+           Party('PSL', 779875),
+           Party('Mniejszosc Niemiecka', 27530)]
 
-for i in range(259):
+for i in range(460):
     chosen_party = max(parties, key=lambda p: p.discounted_votes)
     chosen_party.assign_seat()
     
 all_votes = sum(p.votes for p in parties)
 
 for party in parties:
-    party.print_info(259, all_votes)
+    party.print_info(460, all_votes)
